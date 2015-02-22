@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Python for data science</title>
+
+        <meta name="description" content="A swift introduction to the greatness of Python and its use in data science">
+        <meta name="author" content="Carlos García Márquez">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <style>
+            body {
+                background: #003355;
+                background: -moz-radial-gradient(center, circle cover, #003355 0%, #111 100%);
+                background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #003355), color-stop(100%, #111));
+                background: -webkit-radial-gradient(center, circle cover, #003355 0%, #111 100%);
+                background: -o-radial-gradient(center, circle cover, #003355 0%, #111 100%);
+                background: -ms-radial-gradient(center, circle cover, #003355 0%, #111 100%);
+                background: radial-gradient(center, circle cover, #003355 0%, #111 100%);
+                background-color: #003355;
+                text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+            }
+            .reveal h1 {
+                color: #EEEECC;
+                font-variant: small-caps;
+                font-size: 2.5em;
+                text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+            }
+            .reveal h2 {
+                color: #EEEECC;
+                font-variant: small-caps;
+                font-size: 2em;
+                text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+            }
+            .reveal h3 {
+                text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+            }
+            b {
+                color: #EEEECC;
+            }
+            pre, code {
+                border-radius: 0.25em;
+            }
+            .reveal section img {
+                margin: 0;
+                border: 0;
+                background: transparent;
+                box-shadow: none;
+            }
+        </style>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <section>
+                    <h3>A swift introduction to the greatness of</h3>
+                    <h1>Python</h1>
+                    <h3>and its use in data science</h3>
+                    <p>
+                        <small>Carlos García Márquez / <a href="mailto:carlos.garcia@kernel-analytics.com">carlos.garcia@kernel-analytics.com</a></small>
+                    </p>
+                </section>
+
+                <section>
+
+                    <section>
+                        <h1>What everybody knows</h1>
+                        <p>... and you should too, 'cause it's on Wikipedia.</p>
+                    </section>
+
+                    <section>
+                        <h2>The name...</h2>
+                        <p>... comes originally from <em>Monty Python</em>.</p>
+                        <p>But the logo are actually two snakes:</p>
+                        <img src="img/python-logo-generic.svg" alt="Python logo">
+                    </section>
+
+                    <section>
+                        <h2>It was created...</h2>
+                        <p>... by <b>Guido van Rossum</b>, who is: </p>
+                        <ul>
+                            <li>the appointed <abbr title="Benevolent Dictator For Life">BDFL</abbr></li>
+                            <li>dutch (but we forgive him)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>It was created...</h2>
+                        <p>... in <b>1991</b>. Which means it's older than:</p>
+                        <ul>
+                            <li>Java (1995)</li>
+                            <li>JavaScript (1995)</li>
+                            <li>Ruby (1995)</li>
+                            <li>R (1992)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Python is free software</h2>
+                        <p>It's developed by the <a href="https://www.python.org/psf/">Python Software Foundation</a>.</p>
+                        <p>And many developers <a href="https://www.python.org/community/workshops/">all over the place</a>.</p>
+                    </section>
+
+                    <section>
+                        <h2>The current version is Python 3.4</h2>
+                        <p><b>Python 3</b> launched in 2008.</p>
+                        <p>It introduced a lot of big changes. <a href="https://docs.python.org/3.0/whatsnew/3.0.html">Good changes</a>.</p>
+                        <p>But the community is <a href="https://python3wos.appspot.com/">still transitioning</a> from Python 2.7.</p>
+                        <p>Python 2.7 will have support <a href="https://www.python.org/dev/peps/pep-0373/#id2">until 2020</a>.</p>
+                    </section>
+
+                    <!--section>
+                        <h2>Python Enhancement Proposals (PEPs)</h2>
+                        <p>Are documents that describe new features for the language.</p>
+                        <p>They are <b>the</b> source of reference when it comes to Python.</p>
+                    </section-->
+
+                    <section>
+                        <h2>An interpreted language</h2>
+                        <p>There are many implementations of Python runtimes.</p>
+                        <ul>
+                            <li>CPython (C)</li>
+                            <li>PyPy (Python)</li>
+                            <li>Jython (Java)</li>
+                            <li>IronPython (.NET)</li>
+                        </ul>
+                        <p>You probably use <b>CPython</b>, the reference implementation.</p>
+                    </section>
+
+                    <section>
+                        <h2>Cross-platform</h2>
+                        <p>Most implementations are cross-platform.</p>
+                        <p>They run in both <b>Linux</b> and <b>FreeBSD</b>.</p>
+                        <p>And some lesser operating systems too.</p>
+                    </section>
+
+                </section>
+                <section>
+
+                    <section>
+                        <h1>Reasons to use Python</h1>
+                        <p>... because me saying you should every day is not enough.</p>
+                    </section>
+
+                    <section>
+                        <h2>It's very easy to learn</h2>
+                        <ul>
+                            <li>The basics are very <b>simple</b>.</li>
+                            <li>You can get up to speed and be <b>productive</b> in a few hours.</li>
+                            <li>After a while it becomes <b>intuitive</b> and things just work.</li>
+                            <li>This is a result of a big effort by the community to <a href="https://www.python.org/dev/peps/pep-0020/">strive for</a> quality, consistency and cohesion.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>It has great documentation</h2>
+                        <ul>
+                            <li>The <a href="https://docs.python.org/3/">official documentation</a> is excellent.</li>
+                            <li>In Python the documentation lives <a href="https://www.python.org/dev/peps/pep-0257/">within the code</a>.</li>
+<pre><code>def tabulate(function, start=0):
+    "Return function(0), function(1), ..."
+    return map(function, count(start))</code></pre>
+                            <li>Good code and good documentation go hand in hand.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>An impressive catalog of libraries</h2>
+                        <p>The official <a href="https://pypi.python.org/pypi">Python Package Index</a> lists <b>55619</b> packages.</p>
+                        <p>Many C, C++ and Java libraries have Python <a href="https://pypi.python.org/pypi?%3Aaction=search&term=wrapper&submit=search">wrappers</a>.</p>
+                    </section>
+
+                    <section>
+                        <h2>A huge community</h2>
+                        <p>The Python community is <a href="http://githut.info/">very active</a> and <a href="https://www.python.org/community/">welcoming</a>.</p>
+                        <p>There's <a href="http://pybcn.org/">talks</a>, <a href="http://es.pycon.org/info">conferences</a> and <a href="https://www.coursera.org/course/interactivepython1">courses</a> all the time.</p>
+                    </section>
+
+                    <section>
+                        <h2>Python is fun!</h2>
+                        <img src="img/comic-horizontal.png" alt="Comic about Python">
+                        <p>Check <a href="https://www.python.org/doc/humor/">the humor section</a> of the official documentation.</p>
+                    </section>
+
+                </section>
+                <section>
+
+                    <section>
+                        <h1>Python & data science</h1>
+                        <p>With <b>real</b> examples, fuck yeah!</p>
+                    </section>
+
+                    <section>
+                        <h2></h2>
+                        <p>The use of Python in the data sciences <a href="http://radar.oreilly.com/2013/03/python-data-tools-just-keep-getting-better.html">has exploded in last few years</a>.<p>
+                    </section>
+
+                    <section>
+                        <h2>IPython</h2>
+                        <p><p>
+                        <h2>IPython Notebook</h2>
+                        <p><p>
+                    </section>
+
+                    <section>
+                        <h2>Pandas</h2>
+                        <p>Data structures and analysis.<p>
+                    </section>
+
+                    <section>
+                        <h2>Numpy</h2>
+                        <p>Vectorised operations with n-dimensional arrays.<p>
+                        <p>Implemented in C. Lightning-fast.</p>
+                        <p>If you think you can do faster writing your own C++ ...</p>
+                        <p>I feel bad for you son.</p>
+                    </section>
+
+                    <section>
+                        <h2>Scipy</h2>
+                        <p>A scientific computing library, duh.<p>
+                        <h2>scikit-learn</h2>
+                        <p><p>
+                    </section>
+
+                    <section>
+                        <h2>Matplotlib</h2>
+                        <p><a href="http://matplotlib.org/gallery.html">A plotting library</a>. It's the de-facto standard and used by SciPy.</p>
+                        <p>It's interface is designed to be similar to Matlab.</p>
+                        <p><a href="">ggplot</a> and <a href="">Bokeh</a> also show a lot of promise.</p>
+                    </section>
+
+                    <section>
+                        <h2>Try it yourself</h2>
+                        <p>Your lesser operating system doesn't have a package manager?</p>
+                        <img src="img/anaconda_logo_web.png" alt="Comic about Python">
+                        <p><b>DON'T PANIC!</b> Check out <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>, it has everything you need.<p>
+                    </section>
+
+                    <section>
+                        <h2>But wait! There's more!</h2>
+                        <ul>
+                            <li><a href="http://docs.sympy.org/latest/tutorial/preliminaries.html">Sympy</a>: Symbolic mathematics</li>
+                            <li><a href="https://github.com/yhat/pandasql/blob/master/examples/demo.py">pandasql</a>: SQL queries to pandas tables</li>
+                        </ul>
+                    </section>
+
+
+                </section>
+                <section>
+
+                    <section>
+                        <h1>The Python Showdown</h1>
+                        <p><code>r'but I like (?P&ltlanguage&gt.*)\!'</code></p>
+                    </section>
+
+                    <section>
+                        <h3><code>if language == 'Python':</code></h3>
+                        <p><code>pass</code></p>
+                    </section>
+
+                    <section>
+                        <h3><code>elif language == 'R':</code></h3>
+                        <ul>
+                            <li>Python isn't much faster, but you'll be calling C wrappers mostly</li>
+                            <li style="color: YellowGreen;">PyPI has 55619 libraries, you find almost anything you can imagine</li>
+                            <li style="color: LightCoral;">CRAN has 6355 libraries, but better tools for statistical work</li>
+                            <li style="color: YellowGreen;">Python is nicer to move data around, load, and parse files</li>
+                            <li style="color: YellowGreen;">Python is better to automate tasks and write system scripts</li>
+                            <li style="color: YellowGreen;"><a href="">Pandas</a> has dataframes and it's pretty good</li>
+                            <li style="color: LightCoral;"><a href="">matplotlib</a> is similar to ggplot, although not as good</li>
+                            <li style="color: LightCoral;"><a href="">IPython NB</a> is an alternative to RStudio, but not as good</li>
+                            <li style="color: YellowGreen;">Python libraries have up to date, more complete, non-pdf docs</li>
+                            <li style="color: YellowGreen;">Python code is easier to read ← (and that's an objective fact)</li>
+                            <li style="color: YellowGreen;">Python is cool ← (that's not)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3><code>elif language == 'C++':</code></h3>
+                    </section>
+
+                    <section>
+                        <h3><code>elif language == 'Matlab':</code></h3>
+                    </section>
+
+                    <section>
+                        <h3><code>elif language == 'Java':</code></h3>
+                    </section>
+
+                    <section>
+                        <h3><code>else:</code></h3>
+                        <p><code>raise HandException(language)</code></p>
+                    </section>
+
+                </section>
+                <section>
+
+                    <section>
+                        <h2>Go learn some Python!</h2>
+                        <p>It's dangerous to go alone, follow these:</p>
+                        <ul>
+                            <li><a href="http://learnxinyminutes.com/docs/python3/">Flash overview of Python 3</a></li>
+                            <li><a href="http://flask.pocoo.org/docs/0.10/quickstart/">Make a simple web service</a></li>
+                            <li><a href="https://docs.python.org/3/tutorial/index.html">Follow the official tutorial</a></li>
+                            <li><a href="http://learnpythonthehardway.org/">Try this if you prefer books</a></li>
+                        </ul>
+                    </section>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
