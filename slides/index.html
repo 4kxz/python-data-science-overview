@@ -68,6 +68,12 @@
                 background: transparent;
                 box-shadow: none;
             }
+            .good {
+                color: YellowGreen;
+            }
+            .bad {
+                color: LightCoral;
+            }
         </style>
 
         <!--[if lt IE 9]>
@@ -221,15 +227,10 @@
                     </section>
 
                     <section>
-                        <h2></h2>
-                        <p>The use of Python in the data sciences <a href="http://radar.oreilly.com/2013/03/python-data-tools-just-keep-getting-better.html">has exploded in last few years</a>.<p>
-                    </section>
-
-                    <section>
                         <h2>IPython</h2>
-                        <p><p>
+                        <p>TO DO</p>
                         <h2>IPython Notebook</h2>
-                        <p><p>
+                        <p>TO DO</p>
                     </section>
 
                     <section>
@@ -249,7 +250,7 @@
                         <h2>Scipy</h2>
                         <p>A scientific computing library, duh.<p>
                         <h2>scikit-learn</h2>
-                        <p><p>
+                        <p>TO DO</p>
                     </section>
 
                     <section>
@@ -270,7 +271,7 @@
                         <h2>But wait! There's more!</h2>
                         <ul>
                             <li><a href="http://docs.sympy.org/latest/tutorial/preliminaries.html">Sympy</a>: Symbolic mathematics</li>
-                            <li><a href="https://github.com/yhat/pandasql/blob/master/examples/demo.py">pandasql</a>: SQL queries to pandas tables</li>
+                            <li><a href="https://github.com/yhat/pandasql/blob/master/examples/demo.py">pandasql</a>: SQL queries on pandas tables</li>
                         </ul>
                     </section>
 
@@ -292,29 +293,44 @@
                         <h3><code>elif language == 'R':</code></h3>
                         <ul>
                             <li>Python isn't much faster, but you'll be calling C wrappers mostly</li>
-                            <li style="color: YellowGreen;">PyPI has 55619 libraries, you find almost anything you can imagine</li>
-                            <li style="color: LightCoral;">CRAN has 6355 libraries, but better tools for statistical work</li>
-                            <li style="color: YellowGreen;">Python is nicer to move data around, load, and parse files</li>
-                            <li style="color: YellowGreen;">Python is better to automate tasks and write system scripts</li>
-                            <li style="color: YellowGreen;"><a href="">Pandas</a> has dataframes and it's pretty good</li>
-                            <li style="color: LightCoral;"><a href="">matplotlib</a> is similar to ggplot, although not as good</li>
-                            <li style="color: LightCoral;"><a href="">IPython NB</a> is an alternative to RStudio, but not as good</li>
-                            <li style="color: YellowGreen;">Python libraries have up to date, more complete, non-pdf docs</li>
-                            <li style="color: YellowGreen;">Python code is easier to read ← (and that's an objective fact)</li>
-                            <li style="color: YellowGreen;">Python is cool ← (that's not)</li>
+                            <li class="good">PyPI has 55619 libraries, you find almost anything you can imagine</li>
+                            <li class="bad">CRAN has 6355 libraries, but better tools for statistical work</li>
+                            <li class="good">Python is nicer to move data around, load, and parse files</li>
+                            <li class="good">Python is better to automate tasks and write system scripts</li>
+                            <li class="good"><a href="">Pandas</a> has dataframes and it's pretty good</li>
+                            <li class="bad"><a href="">matplotlib</a> is similar to ggplot, although not as good</li>
+                            <li class="bad"><a href="">IPython NB</a> is an alternative to RStudio, but not as good</li>
+                            <li class="good">Python libraries have up to date, more complete, non-pdf docs</li>
+                            <li class="good">Python code is easier to read ← (and that's an objective fact)</li>
+                            <li class="good">Python is cool ← (that's not)</li>
                         </ul>
                     </section>
 
                     <section>
                         <h3><code>elif language == 'C++':</code></h3>
+                        <ul>
+                            <li>TO DO</li>
+                            <li class="good">TO DO</li>
+                            <li class="bad">TO DO</li>
+                        </ul>
                     </section>
 
                     <section>
                         <h3><code>elif language == 'Matlab':</code></h3>
+                        <ul>
+                            <li>TO DO</li>
+                            <li class="good">TO DO</li>
+                            <li class="bad">TO DO</li>
+                        </ul>
                     </section>
 
                     <section>
                         <h3><code>elif language == 'Java':</code></h3>
+                        <ul>
+                            <li>TO DO</li>
+                            <li class="good">TO DO</li>
+                            <li class="bad">TO DO</li>
+                        </ul>
                     </section>
 
                     <section>
@@ -329,9 +345,11 @@
                         <h2>Go learn some Python!</h2>
                         <p>It's dangerous to go alone, follow these:</p>
                         <ul>
-                            <li><a href="http://learnxinyminutes.com/docs/python3/">Flash overview of Python 3</a></li>
-                            <li><a href="http://flask.pocoo.org/docs/0.10/quickstart/">Make a simple web service</a></li>
-                            <li><a href="https://docs.python.org/3/tutorial/index.html">Follow the official tutorial</a></li>
+                            <li><a href="http://learnxinyminutes.com/docs/python3/">A flash overview of Python 3</a></li>
+                            <li><a href="https://docs.python.org/3/tutorial/index.html">The more thorough official tutorial</a></li>
+                            <li><a href="http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/">Find the dominant color with k-means</a></li>
+                            <li><a href="http://flask.pocoo.org/docs/0.10/quickstart/">Turn your code into a web service</a></li>
+                            <li><a href="slideviewer.herokuapp.com/url/www.hilpisch.com/YH_FPQ_Volatility_Tutorial.ipynb#/">A short example of financial analytics</a></li>
                             <li><a href="http://learnpythonthehardway.org/">Try this if you prefer books</a></li>
                         </ul>
                     </section>
